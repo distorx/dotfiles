@@ -1,8 +1,28 @@
-Dotfiles
-![license](https://img.shields.io/github/license/hqnna/dotfiles?style=flat)
-![commit](https://img.shields.io/github/last-commit/hqnna/dotfiles?style=flat)
-===============================================================================
+# Dotfiles
 
-This repository contains the configuration files for my Arch Linux WSL setup.
+NixOS system and user configuration for my Arch Linux WSL setup, managed with Nix flakes.
 
-![screenshot](https://transpri.de/i/0zao6ihvditdn8.png)
+## What It Does
+
+Declaratively configures a complete WSL development environment — system settings, shell, editor, and developer tools — all reproducible from a single `flake.nix`.
+
+## What's Configured
+
+### System (`system/`)
+- Locale, networking, security hardening
+- Podman container runtime
+- User accounts and permissions
+- WSL-specific settings
+
+### User — hanna (`users/hanna/`)
+- **Shell:** Starship prompt, custom shell config
+- **Editor:** Helix
+- **Tools:** btop, direnv, fastfetch, git, jj (version control), lsd, npm
+- **XDG:** Proper XDG directory setup
+
+## Tech Stack
+
+- **Language:** Nix
+- **System:** NixOS on WSL
+- **Tools:** Nix Flakes, Home Manager
+
